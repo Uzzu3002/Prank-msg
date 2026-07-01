@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>System Error</title>
+
+<style>
+body{
+    margin:0;
+    background:#111;
+    color:#00ff00;
+    font-family:Consolas, monospace;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    text-align:center;
+}
+
+h1{
+    font-size:48px;
+    animation:glitch .2s infinite;
+}
+
+p{
+    font-size:20px;
+    color:#bbb;
+}
+
+@keyframes glitch{
+    0%{transform:translate(2px,0);}
+    25%{transform:translate(-2px,2px);}
+    50%{transform:translate(2px,-2px);}
+    75%{transform:translate(-2px,0);}
+    100%{transform:translate(0,0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>⚠ YOU HAVE BEEN HACKED!!! ⚠</h1>
+    <p>Initializing diagnostics...</p>
+</div>
+
+<script>
+const name = prompt("Enter your name:");
+
+if (name) {
+    alert(`Hello ${name}!`);
+}
+
+setTimeout(() => {
+    alert("Critical Error Detected!");
+}, 1000);
+
+setTimeout(() => {
+    alert("Just kidding 😂");
+}, 2500);
+</script>
+
+</body>
+</html>
